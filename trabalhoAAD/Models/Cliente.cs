@@ -5,8 +5,8 @@ namespace trabalhoAAD.Models;
 
 public enum TipoCliente
 {
-    Empresa,
-    Particular
+    Particular = 0,
+    Empresa = 1
 }
 
 public partial class Cliente
@@ -15,7 +15,7 @@ public partial class Cliente
 
     public string Nome { get; set; } = null!;
 
-    public bool Tipo { get; set; }
+    public TipoCliente Tipo { get; set; }
 
     public string Email { get; set; } = null!;
 
